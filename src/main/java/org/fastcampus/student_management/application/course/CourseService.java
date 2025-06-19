@@ -26,7 +26,6 @@ public class CourseService {
 
   public List<CourseInfoDto> getCourseDayOfWeek(DayOfWeek dayOfWeek) {
     // TODO: 과제 구현 부분
-    // dayOfWeek에 해당하는 수업을 출력
     List<Course> courses = courseRepository.getCourseDayOfWeek(dayOfWeek);
     List<CourseInfoDto> courseInfoDtos = new ArrayList<>();
     for ( Course course : courses )

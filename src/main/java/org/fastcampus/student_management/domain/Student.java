@@ -33,10 +33,12 @@ public class Student {
     return activated;
   }
   public void setActivated(){
+    if(this.activated) return;
     this.activated = true;
   }
 
   public void setDeActivated(){
+    if(!this.activated) return;
     this.activated = false;
   }
 

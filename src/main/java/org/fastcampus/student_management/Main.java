@@ -2,7 +2,7 @@ package org.fastcampus.student_management;
 
 import org.fastcampus.student_management.application.course.CourseService;
 import org.fastcampus.student_management.application.student.StudentService;
-import org.fastcampus.student_management.repo.CourseRepository;
+import org.fastcampus.student_management.repo.CourseRepositoryImpl;
 import org.fastcampus.student_management.repo.StudentRepository;
 import org.fastcampus.student_management.ui.course.CourseController;
 import org.fastcampus.student_management.ui.course.CoursePresenter;
@@ -14,7 +14,7 @@ public class Main {
 
   public static void main(String[] args) {
     StudentRepository studentRepository = new StudentRepository();
-    CourseRepository courseRepository = new CourseRepository();
+    CourseRepositoryImpl courseRepository = new CourseRepositoryImpl();
 
     StudentService studentService = new StudentService(studentRepository);
     CourseService courseService = new CourseService(courseRepository, studentService);

@@ -25,8 +25,8 @@ public class CourseService {
   }
 
   public void registerCourse(CourseInfoDto courseInfoDto) {
-    Student student = studentService.getStudent(courseInfoDto.getStudentName());
-    Course course = new Course(student, courseInfoDto.getCourseName(), courseInfoDto.getFee(), courseInfoDto.getDayOfWeek(), courseInfoDto.getCourseTime());
+    Student student = studentRepository.getStudent(courseInfoDto.getStudentName());
+    Course course = new Course(student, courseInfoDto);
     courseCommandRepository.save(course);
   }
 

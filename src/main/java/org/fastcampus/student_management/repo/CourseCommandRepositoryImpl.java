@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.fastcampus.student_management.application.course.CourseRepository;
+import org.fastcampus.student_management.application.course.interFace.CourseCommandRepository;
 import org.fastcampus.student_management.domain.Course;
 import org.fastcampus.student_management.domain.DayOfWeek;
 
-public class CourseRepositoryImpl implements CourseRepository {
+public class CourseCommandRepositoryImpl implements CourseCommandRepository {
 
   private final Map<String, Course> courseMap = new HashMap<>();
 
